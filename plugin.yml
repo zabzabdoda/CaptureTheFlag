@@ -1,0 +1,29 @@
+name: CaptureTheFlag
+main: me.zabzabdoda.CaptureTheFlag.CaptureTheFlag
+version: 1.0
+api-version: 1.15
+author: zabzabdoda
+description: CaptureTheFlag plugin
+commands:
+  ctf:
+    description: Main command for DragonEvent.
+    usage: |
+           /ctf start
+           Example: /ctf start - starts the ctf game
+permissions:
+    ctf.commands:
+        description: Allows you to setup the game
+        default: op
+    ctf.start:
+        description: Allows you to start the game
+        default: op
+    ctf.craft:
+        description: Allows you to craft items
+        default: op
+    ctf.jointeam:
+        description: Allows you to join a team
+        default: true
+    ctf.death:
+        description: Allows you to start the game
+        default: false
+        
