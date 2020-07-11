@@ -49,6 +49,12 @@ import org.bukkit.scoreboard.Team;
 
 import me.zabzabdoda.Classes.*;
 
+/**
+ * Capture the flag plugin that allows user to setup
+ * game on custom map and play with friends
+ * @author zabzabdoda
+ *
+ */
 public class CaptureTheFlag extends JavaPlugin implements Listener {
 
 	private ArrayList<CTFPlayer> players;

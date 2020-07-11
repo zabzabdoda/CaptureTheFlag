@@ -6,11 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="lib/spigot-api-1.15.2-javadoc.jar"/>
-	<classpathentry kind="lib" path="lib/craftbukkit-1.15.1.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:platform:/resource/CaptureTheFlag/lib/spigot-api-1.15.2-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/tjm76/Documents/Spigt-BukkitLibraries/craftbukkit-1.15.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
