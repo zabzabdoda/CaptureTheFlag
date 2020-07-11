@@ -51,7 +51,7 @@ import me.zabzabdoda.Classes.*;
 
 /**
  * Capture the flag plugin that allows user to setup
- * game on custom map and play with friends
+ * game on custom map and play with friends 
  * @author zabzabdoda
  *
  */
@@ -66,11 +66,6 @@ public class CaptureTheFlag extends JavaPlugin implements Listener {
 		Bukkit.getServer().getPluginManager().registerEvents((Listener) this, (Plugin) this);
 		players = new ArrayList<CTFPlayer>();
 		arenas = new ArrayList<Arena>();
-		// ScoreBoard.setScoreBoard();
-		/*
-		 * for(Player player : Bukkit.getOnlinePlayers()) { players.add(new
-		 * CTFPlayer(player)); ScoreBoard.joinScoreBoard(player); }
-		 */
 		File Arenas = new File(this.getDataFolder() + File.separator + "Arenas");
 
 		if (!this.getDataFolder().exists()) {
@@ -96,10 +91,6 @@ public class CaptureTheFlag extends JavaPlugin implements Listener {
 		}
 	}
 
-	/*
-	 * /ctf help /ctf start /ctf list /ctf set spawn <team> <x,y,z> /ctf set flag
-	 * <team> <x,y,z> /ctf join <team> /ctf leave <team>
-	 */
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (sender instanceof Player) {
@@ -256,7 +247,6 @@ public class CaptureTheFlag extends JavaPlugin implements Listener {
 			FileReader fr = new FileReader(f);
 			prop.load(fr);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
