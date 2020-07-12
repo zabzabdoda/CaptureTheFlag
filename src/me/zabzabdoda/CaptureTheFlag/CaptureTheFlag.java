@@ -66,14 +66,17 @@ public class CaptureTheFlag extends JavaPlugin implements Listener {
 		Bukkit.getServer().getPluginManager().registerEvents((Listener) this, (Plugin) this);
 		players = new ArrayList<CTFPlayer>();
 		arenas = new ArrayList<Arena>();
+		//gets the arena folder in the plugin directory
 		File Arenas = new File(this.getDataFolder() + File.separator + "Arenas");
-
+		//creates the data folder if it doesn't exist
 		if (!this.getDataFolder().exists()) {
 			this.getDataFolder().mkdir();
 		}
+		//creates the arena folder if it doesn't exist
 		if (!Arenas.exists()) {
 			Arenas.mkdir();
 		}
+		//converts all files in the arena folder into arena objects and adds those to an arraylist
 		for(File f : Arenas.listFiles()) {
 			addArena(f);
 		}
@@ -231,6 +234,7 @@ public class CaptureTheFlag extends JavaPlugin implements Listener {
 		return true;
 	}
 
+	//finds an arena by its name
 	public Arena findArena(String name) {
 		for (Arena a : arenas) {
 			if (a.getName().equals(name)) {
@@ -240,6 +244,8 @@ public class CaptureTheFlag extends JavaPlugin implements Listener {
 		return null;
 	}
 	
+	//adds a new arena by loading the file in a properties object
+	//then reads all the data about the arena and adds it to its fields
 	public void addArena(File f) {
 		Properties prop = new Properties();
 		Arena a = new Arena(f.getName().substring(0,f.getName().indexOf(".")));
@@ -363,6 +369,7 @@ public class CaptureTheFlag extends JavaPlugin implements Listener {
 		arenas.add(a);
 	}
 
+	
 	@EventHandler
 	public void breakblock(BlockBreakEvent e) {
 		CTFPlayer p = getCTFPlayer(e.getPlayer());
