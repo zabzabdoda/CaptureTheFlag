@@ -6,7 +6,7 @@ author: zabzabdoda
 description: CaptureTheFlag plugin
 commands:
   ctf:
-    description: Main command for DragonEvent.
+    description: Main command for CaptureTheFlag.
     usage: |
            /ctf start
            Example: /ctf start - starts the ctf game
