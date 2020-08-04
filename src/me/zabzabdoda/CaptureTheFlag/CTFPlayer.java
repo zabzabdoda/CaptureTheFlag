@@ -68,12 +68,14 @@ public class CTFPlayer {
 		playerClass = c;
 	}
 	
+	//items to be given at the start of the game
 	public void getAllItems(Color color) {
 		if(playerClass != null) {
 			playerClass.giveAllItems(player, color);
 		}
 	}
 	
+	//items to be given on respawn
 	public void getRespawnItems(Color color) {
 		if(playerClass != null) {
 			playerClass.giveArmor(player);
